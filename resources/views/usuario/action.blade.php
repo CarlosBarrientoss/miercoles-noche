@@ -13,7 +13,11 @@
                         <!-- /.card-header -->
                         <div class="card-body">
 
-                            <form action="" method="post" id="formRegistroUsuario">
+                            <form action="{{ isset($registro) ? route('usuarios.update', $registro->id) : route('usuarios.store') }}" method="post" id="formRegistroUsuario">
+                                @csrf
+                                @if (isset($registro))
+                                    @method('PUT')
+                                @endif
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="name" class="form-label">Nombre</label>

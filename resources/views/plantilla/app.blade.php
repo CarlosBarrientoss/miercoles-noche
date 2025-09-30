@@ -54,6 +54,7 @@
     <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href="{{ asset('css/adminlte.css') }}" />
     <!--end::Required Plugin(AdminLTE)-->
+    @stack('css')
   </head>
   <!--end::Head-->
   <!--begin::Body-->
@@ -139,6 +140,7 @@
     </script>
     <!--end::OverlayScrollbars Configure-->
     <!--end::Script-->
+    @stack('scripts')
   </body>
   <!--end::Body-->
 </html>
