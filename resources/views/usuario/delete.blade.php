@@ -1,8 +1,8 @@
-<div class="modal fade" id="modal-eliminar-01" tabindex="-1" role="dialog"
+<div class="modal fade" id="modal-eliminar-{{$registro->id}}" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel">
     <div class="modal-dialog">
         <div class="modal-content bg-danger">
-            <form action="#" method="post">
+            <form action="{{route('usuarios.destroy', $registro->id)}}" method="post">
 
                 <div class="modal-header">
                     <h4 class="modal-title">Eliminar registro</h4>
